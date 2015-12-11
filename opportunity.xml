@@ -31,6 +31,15 @@
             <field name="act_window" ref="act_priority"/>
         </record>
 
+        <record model="ir.model.access" id="access_priority_default">
+            <field name="model"
+                search="[('model', '=', 'sale.opportunity.priority')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
         <record model="ir.model.access" id="access_priority">
             <field name="model"
                 search="[('model', '=', 'sale.opportunity.priority')]"/>
