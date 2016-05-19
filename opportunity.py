@@ -4,7 +4,6 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['Opportunity', 'Priority']
-__metaclass__ = PoolMeta
 
 
 class Priority(ModelSQL, ModelView):
@@ -25,6 +24,6 @@ class Priority(ModelSQL, ModelView):
 
 
 class Opportunity:
+    __metaclass__ = PoolMeta
     __name__ = 'sale.opportunity'
-
     priority = fields.Many2One('sale.opportunity.priority', 'Priority')
