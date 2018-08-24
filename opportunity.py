@@ -23,7 +23,6 @@ class Priority(ModelSQL, ModelView):
         return [table.sequence == None, table.sequence]
 
 
-class Opportunity:
-    __metaclass__ = PoolMeta
+class Opportunity(metaclass=PoolMeta):
     __name__ = 'sale.opportunity'
     priority = fields.Many2One('sale.opportunity.priority', 'Priority')
