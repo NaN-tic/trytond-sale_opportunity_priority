@@ -32,8 +32,7 @@
         </record>
 
         <record model="ir.model.access" id="access_priority_default">
-            <field name="model"
-                search="[('model', '=', 'sale.opportunity.priority')]"/>
+            <field name="model">sale.opportunity.priority</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -41,8 +40,7 @@
         </record>
 
         <record model="ir.model.access" id="access_priority">
-            <field name="model"
-                search="[('model', '=', 'sale.opportunity.priority')]"/>
+            <field name="model">sale.opportunity.priority</field>
             <field name="group" ref="sale_opportunity.group_opportunity"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
